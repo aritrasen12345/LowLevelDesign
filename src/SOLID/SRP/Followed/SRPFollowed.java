@@ -80,12 +80,12 @@ public class SRPFollowed {
 
 
         //! PRINTING INVOICE
-        SOLID.SRP.Followed.CartInvoicePrinter cPrinter = new SOLID.SRP.Followed.CartInvoicePrinter(cart);
+        CartInvoicePrinter cPrinter = new CartInvoicePrinter(cart);
 
         cPrinter.printInvoice();
 
         //! SAVING DATA TO DB
-        SOLID.SRP.Followed.CartDBStorage cdbs = new SOLID.SRP.Followed.CartDBStorage(cart);
+        CartDBStorage cdbs = new CartDBStorage(cart);
         cdbs.saveToDB();
     }
 
